@@ -1,0 +1,192 @@
+.waveBackground {
+  height: 100vh;
+  width: 100%;
+  background: url(/images/bg-mobile.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: -1;
+
+  @include breapoint-up(large) {
+    position: absolute;
+    margin-top: 50vh;
+    height: 50vh;
+    background: url(/images/bg-desktop.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+.folderCoponent {
+  height: 11.25rem; // 180px
+  width: 20.375rem; // 326px
+  background: $darkBlue;
+  border-radius: 0.625rem 100px 0.625rem 0.625rem; // 10px 100px 10px 10px
+  padding-left: 2.5625rem; // 41px
+  margin-bottom: 1rem; // 16px
+
+  @include breapoint-up(large) {
+    margin-bottom: 0px;
+    margin-right: 1rem;
+  }
+
+  &__logo {
+    margin-bottom: 2.125rem; // 34px
+  }
+
+  &__folderSvgs {
+    height: 3rem; // 48px
+    width: 11rem; // 176px
+
+    .item {
+      height: 3rem; // 48px
+      width: 3rem; // 48px
+      background: $veryDarkBlue;
+      border-radius: 0.625rem; // 10px
+    }
+  }
+}
+
+.storageInfo {
+  height: 10rem; // 160px
+  width: 20.375rem; // 326px
+  background: $darkBlue;
+  border-radius: 0.625rem; //  10px
+  position: relative;
+  // padding-left: 33px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  @include breapoint-up(large) {
+    height: 9.625rem; // 154px
+    width: 33.75rem; // 540px
+    margin-top: 1.625rem; // 26px
+    align-items: flex-start;
+    text-align: start;
+
+    padding-left: 40px; // 40px
+  }
+
+  &__gigaLeft {
+    height: 2.5rem; // 72px
+    width: 11.1875rem; // 179px
+    background: $white;
+    position: absolute;
+    bottom: -25%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0.625rem; // 10px
+
+    padding-left: 1.625rem; // 26px
+
+    @include breapoint-up(large) {
+      top: -25%;
+      left: 77%;
+    }
+
+    svg {
+      position: absolute;
+      bottom: -1.25rem; // -20px
+      right: 0px;
+    }
+
+    &__number {
+      font-size: $font-lg;
+      font-weight: 700;
+      color: $veryDarkBlue;
+      margin-right: 0.6875rem; // 11px
+    }
+
+    &__smallText {
+      font-size: 0.625rem; // 10px
+      color: $grayishBlue;
+    }
+  }
+
+  &__standardMsg {
+    font-size: 0.75rem; // 12px
+    color: $paleBlue;
+    margin: 0px;
+    margin-bottom: 1.25rem; // 20px
+  }
+
+  &__rangeBackground {
+    height: 1.125rem; // 18px
+    width: 16.25rem; // 260px
+    background: #151d4b;
+    border-radius: 2rem;
+
+    @include breapoint-up(large) {
+      height: 1.125rem; // 18px
+      width: 28.5rem; // 456px
+    }
+
+    .slider {
+      -webkit-appearance: none;
+      width: 97%;
+      height: 0.6875rem; // 11py
+      border-radius: 2rem;
+      background: linear-gradient(
+        to right,
+        hsl(6, 100%, 80%),
+        hsl(335, 100%, 65%)
+      );
+      outline: none;
+
+      -webkit-transition: 0.2s;
+      transition: opacity 0.2s;
+
+      @include breapoint-up(large) {
+        height: 0.75rem; // 12px
+        width: 98%;
+      }
+    }
+
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 0.6875rem; // 11px
+      height: 0.6875rem; // 11px
+      border-radius: 50%;
+      background: $white;
+      background-image: url(/increaseCircle/image/icon-slider.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 1.0625rem 0.625rem; // 17px 10px
+      // box-shadow: 0px 0px 20px hsl(174, 86%, 45%);
+      cursor: pointer;
+    }
+
+    .slider::-moz-range-thumb {
+      width: 1.5625rem; // 25px
+      height: 1.5625rem; // 25px
+      border-radius: 50%;
+      background: #4caf50;
+      cursor: pointer;
+    }
+  }
+
+  &__footerInfo {
+    font-weight: 400;
+    color: $white;
+    width: 80%;
+    font-size: 0.75rem; // 12px
+    margin-top: 0.5rem; // 8px
+
+    @include breapoint-up(large) {
+      margin-top: 0.8125rem; // 13px
+      width: 90%;
+    }
+
+    p {
+      margin: 0px;
+    }
+  }
+}

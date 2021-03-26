@@ -1,0 +1,341 @@
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 64em) {
+  body {
+    background: #0c122c;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  line-height: 1.15;
+  margin-top: 0px;
+}
+
+h1 {
+  font-size: 2.31rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.875rem;
+  margin-bottom: 1.5625rem;
+}
+
+@media (min-width: 64em) {
+  h2 {
+    font-size: 2.25rem;
+    margin-bottom: 2.25rem;
+  }
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 2.25rem;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-jc-sa {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.flex-ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-fd-c {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.desktop {
+  display: none;
+}
+
+@media (min-width: 64em) {
+  .desktop {
+    display: block;
+  }
+}
+
+.mobile {
+  display: block;
+}
+
+@media (min-width: 64em) {
+  .mobile {
+    display: none;
+  }
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.waveBackground {
+  height: 100vh;
+  width: 100%;
+  background: url(/images/bg-mobile.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: -1;
+}
+
+@media (min-width: 64em) {
+  .waveBackground {
+    position: absolute;
+    margin-top: 50vh;
+    height: 50vh;
+    background: url(/images/bg-desktop.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+.folderCoponent {
+  height: 11.25rem;
+  width: 20.375rem;
+  background: #1d2c67;
+  border-radius: 0.625rem 100px 0.625rem 0.625rem;
+  padding-left: 2.5625rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 64em) {
+  .folderCoponent {
+    margin-bottom: 0px;
+    margin-right: 1rem;
+  }
+}
+
+.folderCoponent__logo {
+  margin-bottom: 2.125rem;
+}
+
+.folderCoponent__folderSvgs {
+  height: 3rem;
+  width: 11rem;
+}
+
+.folderCoponent__folderSvgs .item {
+  height: 3rem;
+  width: 3rem;
+  background: #0c122c;
+  border-radius: 0.625rem;
+}
+
+.storageInfo {
+  height: 10rem;
+  width: 20.375rem;
+  background: #1d2c67;
+  border-radius: 0.625rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 64em) {
+  .storageInfo {
+    height: 9.625rem;
+    width: 33.75rem;
+    margin-top: 1.625rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: start;
+    padding-left: 40px;
+  }
+}
+
+.storageInfo__gigaLeft {
+  height: 2.5rem;
+  width: 11.1875rem;
+  background: #ffffff;
+  position: absolute;
+  bottom: -25%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 0.625rem;
+  padding-left: 1.625rem;
+}
+
+@media (min-width: 64em) {
+  .storageInfo__gigaLeft {
+    top: -25%;
+    left: 77%;
+  }
+}
+
+.storageInfo__gigaLeft svg {
+  position: absolute;
+  bottom: -1.25rem;
+  right: 0px;
+}
+
+.storageInfo__gigaLeft__number {
+  font-size: 1.9375rem;
+  font-weight: 700;
+  color: #0c122c;
+  margin-right: 0.6875rem;
+}
+
+.storageInfo__gigaLeft__smallText {
+  font-size: 0.625rem;
+  color: #848794;
+}
+
+.storageInfo__standardMsg {
+  font-size: 0.75rem;
+  color: #dddbff;
+  margin: 0px;
+  margin-bottom: 1.25rem;
+}
+
+.storageInfo__rangeBackground {
+  height: 1.125rem;
+  width: 16.25rem;
+  background: #151d4b;
+  border-radius: 2rem;
+}
+
+@media (min-width: 64em) {
+  .storageInfo__rangeBackground {
+    height: 1.125rem;
+    width: 28.5rem;
+  }
+}
+
+.storageInfo__rangeBackground .slider {
+  -webkit-appearance: none;
+  width: 97%;
+  height: 0.6875rem;
+  border-radius: 2rem;
+  background: -webkit-gradient(linear, left top, right top, from(#ffa399), to(#ff4d97));
+  background: linear-gradient(to right, #ffa399, #ff4d97);
+  outline: none;
+  -webkit-transition: 0.2s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+@media (min-width: 64em) {
+  .storageInfo__rangeBackground .slider {
+    height: 0.75rem;
+    width: 98%;
+  }
+}
+
+.storageInfo__rangeBackground .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0.6875rem;
+  height: 0.6875rem;
+  border-radius: 50%;
+  background: #ffffff;
+  background-image: url(/increaseCircle/image/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1.0625rem 0.625rem;
+  cursor: pointer;
+}
+
+.storageInfo__rangeBackground .slider::-moz-range-thumb {
+  width: 1.5625rem;
+  height: 1.5625rem;
+  border-radius: 50%;
+  background: #4caf50;
+  cursor: pointer;
+}
+
+.storageInfo__footerInfo {
+  font-weight: 400;
+  color: #ffffff;
+  width: 80%;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 64em) {
+  .storageInfo__footerInfo {
+    margin-top: 0.8125rem;
+    width: 90%;
+  }
+}
+
+.storageInfo__footerInfo p {
+  margin: 0px;
+}
+/*# sourceMappingURL=style.css.map */
